@@ -1,0 +1,1 @@
+Consulate Diff Watch (Manual) – Monthly change log (B2B). Static, editor‑curated feed delivering a monthly, source‑linked changelog of official consulate/program page updates for agencies/consultants. Includes /diffs/YYYY‑MM index, diff detail excerpts, RSS and CSV; schema‑validated snapshots.jsonl workflow.
