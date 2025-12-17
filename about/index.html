@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Consulate Diff Watch - Our editorial process and commitment to quality immigration intelligence">
+    <title>About Us | Consulate Diff Watch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #10b981;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 4rem 0;
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .content-section h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .content-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+        
+        .content-section ul, .content-section ol {
+            margin-bottom: 1.5rem;
+            margin-left: 2rem;
+        }
+        
+        .content-section li {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight-box {
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .highlight-box h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .process-steps {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .process-step {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .process-step h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+        
+        .process-step .step-number {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">🏛️ Consulate Diff Watch</a>
+                <nav>
+                    <ul>
+                        <li><a href="/diffs/2025-12/">Archives</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/feeds/rss.xml">RSS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Consulate Diff Watch</h1>
+            <p>Trusted intelligence for immigration professionals</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="content-section">
+                <h2>Our Mission</h2>
+                <p>Consulate Diff Watch was created to solve a critical problem facing immigration agencies, consultants, and law firms: staying current with constantly changing visa policies and consulate requirements across multiple jurisdictions.</p>
+                
+                <p>Every day, consulates and immigration authorities update their websites with policy changes, new requirements, and processing time adjustments. Missing these changes can mean misinformed clients, delayed applications, or compliance issues.</p>
+                
+                <p>We provide a single, reliable source of truth—a monthly, editor-curated changelog that tracks substantive changes to official consulate and visa program pages, delivered with source links and before/after excerpts.</p>
+            </div>
+
+            <div class="content-section" id="editorial">
+                <h2>Our Editorial Process</h2>
+                <p>Quality and accuracy are paramount. Every entry in our monthly changelog goes through a rigorous manual review process:</p>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <h4><span class="step-number">1</span>Automated Monitoring</h4>
+                        <p>We monitor official consulate and immigration authority websites across multiple countries and jurisdictions. Our systems capture snapshots of page content at regular intervals.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <h4><span class="step-number">2</span>Change Detection</h4>
+                        <p>When changes are detected, our system generates detailed diffs highlighting what has been added, removed, or modified on each tracked page.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <h4><span class="step-number">3</span>Expert Review</h4>
+                        <p>Immigration professionals on our editorial team manually review every detected change. They filter out:</p>
+                        <ul>
+                            <li>Formatting or styling changes</li>
+                            <li>Minor typo corrections</li>
+                            <li>Seasonal or routine updates (like holiday closures)</li>
+                            <li>Changes to non-policy content</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="process-step">
+                        <h4><span class="step-number">4</span>Annotation & Context</h4>
+                        <p>For substantive changes, our editors add context, categorize by importance level (important, moderate, minor), and create clear before/after excerpts with direct source links.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <h4><span class="step-number">5</span>Schema Validation</h4>
+                        <p>All entries are validated against our structured schema (snapshots.jsonl format) to ensure data consistency and enable easy integration with case management systems.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <h4><span class="step-number">6</span>Monthly Delivery</h4>
+                        <p>Curated changes are consolidated into a monthly digest and delivered via web, RSS, CSV export, and API, typically by the 15th of each month.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>What We Track</h2>
+                <p>Our coverage includes official pages from:</p>
+                <ul>
+                    <li>US Embassies and Consulates (visa processing, appointment availability, document requirements)</li>
+                    <li>Canadian Immigration (Express Entry, working holiday programs, study permits)</li>
+                    <li>UK Visa Application Centres (Skilled Worker, Student, Family visas)</li>
+                    <li>Schengen visa authorities across European consulates</li>
+                    <li>Australian and New Zealand immigration portals</li>
+                    <li>Other major destinations and digital nomad visa programs</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h3>What We Don't Track</h3>
+                    <p>We focus exclusively on official government and consulate sources. We do not monitor third-party visa service providers, unofficial blogs, or forum discussions. This ensures the highest level of accuracy and reliability.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Who We Serve</h2>
+                <p>Consulate Diff Watch is designed specifically for B2B users in the immigration industry:</p>
+                <ul>
+                    <li><strong>Immigration Agencies:</strong> Stay informed across all jurisdictions you serve without dedicating staff time to manual monitoring.</li>
+                    <li><strong>Consultants & Advisors:</strong> Confidently advise clients with the most current information on visa policies and requirements.</li>
+                    <li><strong>Law Firms:</strong> Ensure compliance and avoid missed deadlines due to unnoticed policy changes.</li>
+                    <li><strong>Corporate HR Teams:</strong> Keep international mobility programs up-to-date for employee relocations.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Our Commitment</h2>
+                <p>We are committed to:</p>
+                <ul>
+                    <li><strong>Accuracy:</strong> Every entry is manually verified by immigration professionals.</li>
+                    <li><strong>Transparency:</strong> All changes include direct links to official sources for independent verification.</li>
+                    <li><strong>Timeliness:</strong> Monthly digests delivered consistently by mid-month.</li>
+                    <li><strong>Actionability:</strong> Clear categorization and context to help you prioritize what matters.</li>
+                    <li><strong>Integration:</strong> Structured data formats (JSON, CSV) for seamless integration with your workflows.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Get Started</h2>
+                <p>Ready to streamline your consulate monitoring? <a href="/#pricing" style="color: var(--primary-color); font-weight: 600;">Explore our pricing plans</a> or <a href="/diffs/2025-12/" style="color: var(--primary-color); font-weight: 600;">view a sample monthly report</a> to see our quality firsthand.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/diffs/2025-12/">Latest Reports</a></li>
+                        <li><a href="/feeds/rss.xml">RSS Feed</a></li>
+                        <li><a href="/#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/about/#editorial">Editorial Process</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Consulate Diff Watch. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
