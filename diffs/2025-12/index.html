@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="December 2025 Consulate Updates - Curated changelog of official visa and immigration policy changes">
+    <title>December 2025 Changelog | Consulate Diff Watch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #10b981;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --warning-color: #f59e0b;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background-color: var(--bg-white);
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .page-header .meta {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+        
+        .intro-text {
+            background-color: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        /* Diff Cards */
+        .diff-cards {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .diff-card {
+            background-color: var(--bg-white);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: box-shadow 0.2s;
+        }
+        
+        .diff-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        
+        .diff-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .diff-title {
+            flex: 1;
+        }
+        
+        .diff-title h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .diff-source {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .diff-source a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .diff-source a:hover {
+            text-decoration: underline;
+        }
+        
+        .diff-meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .badge.important {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .badge.moderate {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+        
+        .badge.minor {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .badge.date {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+        }
+        
+        .diff-content {
+            margin-top: 1.5rem;
+        }
+        
+        .diff-summary {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: var(--bg-light);
+            border-radius: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .diff-changes {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .change-block {
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .change-label {
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .before {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .after {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        
+        .change-text {
+            padding: 1rem;
+            background-color: var(--bg-white);
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+        
+        .diff-actions {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .btn-secondary {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--border-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .diff-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">🏛️ Consulate Diff Watch</a>
+                <nav>
+                    <ul>
+                        <li><a href="/diffs/2025-12/">Archives</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/feeds/rss.xml">RSS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>December 2025 Changelog</h1>
+            <p class="meta">3 official updates tracked • Last updated: December 15, 2025</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="intro-text">
+                <p><strong>Sample Report:</strong> This is a demonstration of our monthly changelog format. Actual reports include comprehensive coverage of consulate and visa program changes across multiple jurisdictions.</p>
+            </div>
+
+            <div class="diff-cards">
+                <!-- Diff Card 1 -->
+                <article class="diff-card">
+                    <div class="diff-header">
+                        <div class="diff-title">
+                            <h2>US Embassy Berlin - B1/B2 Visa Processing Times</h2>
+                            <p class="diff-source">Source: <a href="#" target="_blank" rel="noopener">travel.state.gov/berlin</a></p>
+                        </div>
+                        <div class="diff-meta">
+                            <span class="badge important">Important</span>
+                            <span class="badge date">Dec 12, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="diff-content">
+                        <div class="diff-summary">
+                            📋 <strong>Summary:</strong> Processing time estimate for B1/B2 tourist and business visas increased from 3 weeks to 6 weeks. Emergency appointment availability unchanged.
+                        </div>
+                        
+                        <div class="diff-changes">
+                            <div class="change-block">
+                                <div class="change-label before">Before (Nov 30, 2025)</div>
+                                <div class="change-text">Current processing time for B1/B2 visa appointments: approximately 3 weeks from interview date to passport return with visa.</div>
+                            </div>
+                            
+                            <div class="change-block">
+                                <div class="change-label after">After (Dec 12, 2025)</div>
+                                <div class="change-text">Current processing time for B1/B2 visa appointments: approximately 6 weeks from interview date to passport return with visa. Expedited processing available for emergency cases only.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="diff-actions">
+                            <a href="#" class="btn btn-primary">View Full Source</a>
+                            <a href="#" class="btn btn-secondary">Export to CSV</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Diff Card 2 -->
+                <article class="diff-card">
+                    <div class="diff-header">
+                        <div class="diff-title">
+                            <h2>Canadian Consulate NYC - Working Holiday Eligibility</h2>
+                            <p class="diff-source">Source: <a href="#" target="_blank" rel="noopener">canada.ca/working-holiday</a></p>
+                        </div>
+                        <div class="diff-meta">
+                            <span class="badge moderate">Moderate</span>
+                            <span class="badge date">Dec 8, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="diff-content">
+                        <div class="diff-summary">
+                            📋 <strong>Summary:</strong> Working Holiday visa age limit increased from 30 to 35 years for US citizens. Application quota for 2026 also increased.
+                        </div>
+                        
+                        <div class="diff-changes">
+                            <div class="change-block">
+                                <div class="change-label before">Before (Dec 1, 2025)</div>
+                                <div class="change-text">Eligibility: US citizens aged 18-30 may apply for the International Experience Canada (IEC) Working Holiday visa. Annual quota: 5,000 places.</div>
+                            </div>
+                            
+                            <div class="change-block">
+                                <div class="change-label after">After (Dec 8, 2025)</div>
+                                <div class="change-text">Eligibility: US citizens aged 18-35 may apply for the International Experience Canada (IEC) Working Holiday visa. Annual quota for 2026: 7,500 places. Age change effective January 1, 2026.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="diff-actions">
+                            <a href="#" class="btn btn-primary">View Full Source</a>
+                            <a href="#" class="btn btn-secondary">Export to CSV</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Diff Card 3 -->
+                <article class="diff-card">
+                    <div class="diff-header">
+                        <div class="diff-title">
+                            <h2>UK Visa Application Centre - Document Requirements</h2>
+                            <p class="diff-source">Source: <a href="#" target="_blank" rel="noopener">gov.uk/skilled-worker-visa</a></p>
+                        </div>
+                        <div class="diff-meta">
+                            <span class="badge minor">Minor</span>
+                            <span class="badge date">Dec 5, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="diff-content">
+                        <div class="diff-summary">
+                            📋 <strong>Summary:</strong> New requirement for digital photo upload added to Skilled Worker visa applications. Physical photos no longer accepted.
+                        </div>
+                        
+                        <div class="diff-changes">
+                            <div class="change-block">
+                                <div class="change-label before">Before (Nov 28, 2025)</div>
+                                <div class="change-text">Photo requirements: Provide 2 printed passport-style photographs meeting UK visa photo standards at your appointment.</div>
+                            </div>
+                            
+                            <div class="change-block">
+                                <div class="change-label after">After (Dec 5, 2025)</div>
+                                <div class="change-text">Photo requirements: Upload a digital passport-style photograph meeting UK visa photo standards when completing your online application. Physical photos will no longer be accepted at appointments.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="diff-actions">
+                            <a href="#" class="btn btn-primary">View Full Source</a>
+                            <a href="#" class="btn btn-secondary">Export to CSV</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/diffs/2025-12/">Latest Reports</a></li>
+                        <li><a href="/feeds/rss.xml">RSS Feed</a></li>
+                        <li><a href="/#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/about/#editorial">Editorial Process</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Consulate Diff Watch. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+name: Deploy PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Deploy preview to Surge.sh
+        id: deploy
+        run: |
+          npm install -g surge
+          export SURGE_DOMAIN="consulate-diff-watch-pr-${{ github.event.pull_request.number }}.surge.sh"
+          surge . $SURGE_DOMAIN --token ${{ secrets.SURGE_TOKEN }}
+          echo "preview_url=https://$SURGE_DOMAIN" >> $GITHUB_OUTPUT
+        continue-on-error: true
+      
+      - name: Comment PR with preview URL (Surge)
+        if: steps.deploy.outcome == 'success'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const previewUrl = '${{ steps.deploy.outputs.preview_url }}';
+            const comment = `## 🚀 Preview Deployment
+            
+            Your preview is ready! View it at: ${previewUrl}
+            
+            This preview will be updated automatically when you push new commits to this PR.`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+      
+      - name: Deploy preview using GitHub Pages (fallback)
+        if: steps.deploy.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const comment = `## 📝 Preview Information
+            
+            A preview deployment will be available once this PR is merged to main and deployed via GitHub Pages.
+            
+            You can view the current changes by checking out this branch locally:
+            \`\`\`bash
+            git fetch origin pull/${{ github.event.pull_request.number }}/head:pr-${{ github.event.pull_request.number }}
+            git checkout pr-${{ github.event.pull_request.number }}
+            \`\`\`
+            
+            Then open \`index.html\` in your browser.`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });

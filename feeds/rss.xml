@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Consulate Diff Watch - Monthly Changelog</title>
+        <link>https://chaos-factory.github.io/ideator-execution-008Digitalnomadvisa-5-ConsulateDiffWatchManualMonthlychangelogB2B/</link>
+        <description>Monthly curated changelog of official consulate and visa program page updates for immigration agencies and consultants</description>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 15 Dec 2025 12:00:00 GMT</lastBuildDate>
+        <atom:link href="https://chaos-factory.github.io/ideator-execution-008Digitalnomadvisa-5-ConsulateDiffWatchManualMonthlychangelogB2B/feeds/rss.xml" rel="self" type="application/rss+xml"/>
+        <generator>Consulate Diff Watch</generator>
+        <docs>https://www.rssboard.org/rss-specification</docs>
+        <webMaster>info@consulatediffwatch.com (Consulate Diff Watch Team)</webMaster>
+        <ttl>1440</ttl>
+
+        <item>
+            <title>US Embassy Berlin - B1/B2 Visa Processing Times Updated</title>
+            <link>https://chaos-factory.github.io/ideator-execution-008Digitalnomadvisa-5-ConsulateDiffWatchManualMonthlychangelogB2B/diffs/2025-12/#us-embassy-berlin</link>
+            <description><![CDATA[
+                <p><strong>Important Update:</strong> Processing time estimate for B1/B2 tourist and business visas increased from 3 weeks to 6 weeks. Emergency appointment availability unchanged.</p>
+                <p><strong>Before (Nov 30, 2025):</strong> Current processing time for B1/B2 visa appointments: approximately 3 weeks from interview date to passport return with visa.</p>
+                <p><strong>After (Dec 12, 2025):</strong> Current processing time for B1/B2 visa appointments: approximately 6 weeks from interview date to passport return with visa. Expedited processing available for emergency cases only.</p>
+                <p><strong>Source:</strong> <a href="#">travel.state.gov/berlin</a></p>
+            ]]></description>
+            <pubDate>Thu, 12 Dec 2025 10:00:00 GMT</pubDate>
+            <guid isPermaLink="false">consulate-diff-watch-2025-12-us-embassy-berlin-b1b2</guid>
+            <category>US Embassy</category>
+            <category>Processing Times</category>
+            <dc:creator>Consulate Diff Watch Editorial Team</dc:creator>
+        </item>
+
+        <item>
+            <title>Canadian Consulate NYC - Working Holiday Eligibility Expanded</title>
+            <link>https://chaos-factory.github.io/ideator-execution-008Digitalnomadvisa-5-ConsulateDiffWatchManualMonthlychangelogB2B/diffs/2025-12/#canada-working-holiday</link>
+            <description><![CDATA[
+                <p><strong>Moderate Update:</strong> Working Holiday visa age limit increased from 30 to 35 years for US citizens. Application quota for 2026 also increased.</p>
+                <p><strong>Before (Dec 1, 2025):</strong> Eligibility: US citizens aged 18-30 may apply for the International Experience Canada (IEC) Working Holiday visa. Annual quota: 5,000 places.</p>
+                <p><strong>After (Dec 8, 2025):</strong> Eligibility: US citizens aged 18-35 may apply for the International Experience Canada (IEC) Working Holiday visa. Annual quota for 2026: 7,500 places. Age change effective January 1, 2026.</p>
+                <p><strong>Source:</strong> <a href="#">canada.ca/working-holiday</a></p>
+            ]]></description>
+            <pubDate>Sun, 08 Dec 2025 14:00:00 GMT</pubDate>
+            <guid isPermaLink="false">consulate-diff-watch-2025-12-canada-working-holiday</guid>
+            <category>Canadian Consulate</category>
+            <category>Working Holiday</category>
+            <dc:creator>Consulate Diff Watch Editorial Team</dc:creator>
+        </item>
+
+        <item>
+            <title>UK Visa Application Centre - Document Requirements Changed</title>
+            <link>https://chaos-factory.github.io/ideator-execution-008Digitalnomadvisa-5-ConsulateDiffWatchManualMonthlychangelogB2B/diffs/2025-12/#uk-skilled-worker</link>
+            <description><![CDATA[
+                <p><strong>Minor Update:</strong> New requirement for digital photo upload added to Skilled Worker visa applications. Physical photos no longer accepted.</p>
+                <p><strong>Before (Nov 28, 2025):</strong> Photo requirements: Provide 2 printed passport-style photographs meeting UK visa photo standards at your appointment.</p>
+                <p><strong>After (Dec 5, 2025):</strong> Photo requirements: Upload a digital passport-style photograph meeting UK visa photo standards when completing your online application. Physical photos will no longer be accepted at appointments.</p>
+                <p><strong>Source:</strong> <a href="#">gov.uk/skilled-worker-visa</a></p>
+            ]]></description>
+            <pubDate>Thu, 05 Dec 2025 09:00:00 GMT</pubDate>
+            <guid isPermaLink="false">consulate-diff-watch-2025-12-uk-skilled-worker</guid>
+            <category>UK Visa</category>
+            <category>Document Requirements</category>
+            <dc:creator>Consulate Diff Watch Editorial Team</dc:creator>
+        </item>
+
+        <item>
+            <title>November 2025 Monthly Digest Available</title>
+            <link>https://chaos-factory.github.io/ideator-execution-008Digitalnomadvisa-5-ConsulateDiffWatchManualMonthlychangelogB2B/diffs/2025-11/</link>
+            <description><![CDATA[
+                <p>The November 2025 monthly changelog is now available with 8 tracked updates across US, Canadian, UK, and Schengen consulates.</p>
+                <p>Highlights include: New biometric requirements for Schengen visas, changes to US visa interview waiver programs, and updates to Canadian Express Entry point calculations.</p>
+            ]]></description>
+            <pubDate>Fri, 15 Nov 2025 12:00:00 GMT</pubDate>
+            <guid isPermaLink="false">consulate-diff-watch-2025-11-digest</guid>
+            <category>Monthly Digest</category>
+            <dc:creator>Consulate Diff Watch Editorial Team</dc:creator>
+        </item>
+
+    </channel>
+</rss>
